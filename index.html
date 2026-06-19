@@ -1654,16 +1654,23 @@ section { position: relative; padding: 140px 0; }
           if (!text.trim()) return;
           var parent = node.parentNode;
           var frag = document.createDocumentFragment();
-          for (var i = 0; i < text.length; i++) {
-            if (text[i] === ' ') {
-              frag.appendChild(document.createTextNode(' '));
+          var words = text.split(/(\s+)/);
+          for (var w = 0; w < words.length; w++) {
+            var word = words[w];
+            if (!word.trim()) {
+              frag.appendChild(document.createTextNode(word));
             } else {
-              var s = document.createElement('span');
-              s.className = 'split-char';
-              s.style.animationDelay = (baseDelay + charIdx * 0.035) + 's';
-              s.textContent = text[i];
-              frag.appendChild(s);
-              charIdx++;
+              var wordSpan = document.createElement('span');
+              wordSpan.style.cssText = 'display:inline-block;white-space:nowrap';
+              for (var i = 0; i < word.length; i++) {
+                var s = document.createElement('span');
+                s.className = 'split-char';
+                s.style.animationDelay = (baseDelay + charIdx * 0.035) + 's';
+                s.textContent = word[i];
+                wordSpan.appendChild(s);
+                charIdx++;
+              }
+              frag.appendChild(wordSpan);
             }
           }
           parent.replaceChild(frag, node);
