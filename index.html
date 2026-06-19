@@ -1518,6 +1518,10 @@ section { position: relative; padding: 140px 0; }
   var hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var shouldAnimate = !prefersReducedMotion;
+  var tabHidden = false;
+  document.addEventListener('visibilitychange', function() {
+    tabHidden = document.hidden;
+  });
 
   /* ========== CUSTOM CURSOR ========== */
   if (shouldAnimate && hasFinePointer) {
@@ -1561,9 +1565,14 @@ section { position: relative; padding: 140px 0; }
       ringY += (mouseY - ringY) * 0.2;
       ring.style.left = ringX + 'px';
       ring.style.top = ringY + 'px';
-      requestAnimationFrame(cursorSmooth);
+      if (!tabHidden) requestAnimationFrame(cursorSmooth);
     }
     cursorSmooth();
+    document.addEventListener('visibilitychange', function() {
+      if (!document.hidden && !prefersReducedMotion && hasFinePointer) {
+        requestAnimationFrame(cursorSmooth);
+      }
+    });
 
     document.addEventListener('mousedown', function() { ring.classList.add('click'); });
     document.addEventListener('mouseup', function() { ring.classList.remove('click'); });
@@ -1667,7 +1676,9 @@ section { position: relative; padding: 140px 0; }
     var ctx = canvas.getContext('2d');
     var particles = [];
     var mouseParticle = { x: 0, y: 0, active: false };
-    var PARTICLE_COUNT = 45;
+    var PARTICLE_COUNT = 30;
+    var particleAnimId = null;
+    var particleRunning = false;
 
     function resizeCanvas() {
       canvas.width = canvas.parentElement.offsetWidth;
@@ -1725,43 +1736,73 @@ section { position: relative; padding: 140px 0; }
     canvas.addEventListener('mouseleave', function() { mouseParticle.active = false; });
 
     var heroSection = document.querySelector('.hero');
-    var particleAnimId = null;
 
     function drawParticles() {
-      if (!heroSection) return;
+      if (!heroSection || tabHidden) { particleRunning = false; return; }
       var heroRect = heroSection.getBoundingClientRect();
-      var isVisible = heroRect.bottom > 0 && heroRect.top < window.innerHeight;
-
-      if (isVisible) {
+      if (!(heroRect.bottom > 0 && heroRect.top < window.innerHeight)) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particleRunning = false;
+        return;
+      }
 
-        // Emit from cursor
-        if (mouseParticle.active) {
-          for (var b = 0; b < 2; b++) {
-            if (particles.length < PARTICLE_COUNT + 10) break;
-            var idx = Math.floor(Math.random() * particles.length);
-            var p = particles[idx];
-            if (p.life > p.maxLife * 0.5) {
-              p.x = mouseParticle.x + (Math.random() - 0.5) * 30;
-              p.y = mouseParticle.y + (Math.random() - 0.5) * 30;
-              p.life = 0;
-              p.opacity = 0.3;
-            }
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Emit from cursor
+      if (mouseParticle.active) {
+        for (var b = 0; b < 1; b++) {
+          if (particles.length < PARTICLE_COUNT + 10) break;
+          var idx = Math.floor(Math.random() * particles.length);
+          var p = particles[idx];
+          if (p.life > p.maxLife * 0.5) {
+            p.x = mouseParticle.x + (Math.random() - 0.5) * 30;
+            p.y = mouseParticle.y + (Math.random() - 0.5) * 30;
+            p.life = 0;
+            p.opacity = 0.3;
           }
         }
-
-        for (var c = 0; c < particles.length; c++) {
-          particles[c].update();
-          particles[c].draw();
-        }
-        particleAnimId = requestAnimationFrame(drawParticles);
-      } else {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        if (particleAnimId) cancelAnimationFrame(particleAnimId);
-        particleAnimId = requestAnimationFrame(drawParticles);
       }
+
+      for (var c = 0; c < particles.length; c++) {
+        particles[c].update();
+        particles[c].draw();
+      }
+      particleRunning = true;
+      requestAnimationFrame(drawParticles);
     }
-    drawParticles();
+
+    function startParticles() {
+      if (particleRunning || !canvas || tabHidden) return;
+      particleRunning = true;
+      drawParticles();
+    }
+
+    function stopParticles() {
+      particleRunning = false;
+      if (particleAnimId) { cancelAnimationFrame(particleAnimId); particleAnimId = null; }
+      if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    startParticles();
+
+    // Scroll-based: start/stop based on hero visibility
+    var scrollThrottle;
+    window.addEventListener('scroll', function() {
+      if (scrollThrottle) return;
+      scrollThrottle = setTimeout(function() {
+        scrollThrottle = null;
+        if (tabHidden) return;
+        var heroRect = heroSection.getBoundingClientRect();
+        if (heroRect.bottom > 0 && heroRect.top < window.innerHeight) startParticles();
+        else stopParticles();
+      }, 200);
+    }, { passive: true });
+
+    // Tab visibility: fully stop when hidden, resume when visible
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) stopParticles();
+      else startParticles();
+    });
   }
 
   /* ========== 3D TILT CARDS ========== */
