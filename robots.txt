@@ -1,0 +1,25 @@
+# robots.txt — WellFit Seat Covers
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://wellfitworld.com/sitemap.xml
+
+# Disallow admin areas (WordPress)
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-json/
+
+# Disallow duplicate content
+Disallow: /*?s=
+Disallow: /*&s=
+Disallow: /tag/
+Disallow: /category/
+
+# Allow crawlers full access to main content
+Allow: /blog/
+Allow: /wp-content/uploads/
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 5

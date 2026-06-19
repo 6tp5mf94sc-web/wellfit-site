@@ -1,0 +1,19 @@
+# Playwright MCP artifacts
+.playwright-mcp/
+temporary screenshots/
+.wellfit-snapshot.md
+
+# Videos (user's personal captures — not site content)
+Videos/
+
+# CLI files
+CLAUDE.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+serve.mjs
+screenshot.mjs
