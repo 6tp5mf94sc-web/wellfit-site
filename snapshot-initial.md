@@ -1,0 +1,79 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - link "WellFit Home" [ref=e5] [cursor=pointer]:
+        - /url: "#"
+      - list [ref=e7]
+  - region "Hero" [ref=e20]:
+    - generic [ref=e27]:
+      - img "WellFit" [ref=e28]
+      - generic [ref=e29]: Since 1987 — India's Trusted Name
+      - heading "C u s t o m C a r S e a t C o v e r s E x c e p t i o n a l C r a f t , R e i m a g i n e d I n t e r i o r s ." [level=1] [ref=e31]
+      - paragraph [ref=e89]: Precision-tailored luxury seat covers that transform every drive — crafted in India for the world's most discerning vehicles.
+      - generic [ref=e90]
+    - generic [ref=e95]: Scroll
+  - region "About WellFit" [ref=e97]:
+    - generic [ref=e99]:
+      - img "WellFit premium interior" [ref=e102]
+      - generic [ref=e103]
+  - region "WellFit by the numbers" [ref=e110]:
+    - generic [ref=e113]:
+      - generic [ref=e114]: Our Legacy
+      - heading "Building Trust Since 1987" [level=2] [ref=e115]
+      - paragraph [ref=e116]: Numbers that speak to nearly four decades of uncompromising quality.
+      - generic [ref=e117]
+  - region "How it works" [ref=e127]:
+    - generic [ref=e128]:
+      - generic [ref=e129]: Our Process
+      - heading "The Art of Craftsmanship" [level=2] [ref=e130]
+      - paragraph [ref=e131]: Four generations of precision — from initial design to final installation, each step is an art form perfected over 38 years.
+      - generic [ref=e132]
+  - region "Chairman's story" [ref=e149]:
+    - generic [ref=e151]:
+      - img "Yahya Ebrahim — Chairman, WellFit" [ref=e153]
+      - generic [ref=e154]
+  - region "Quality pillars" [ref=e162]:
+    - generic [ref=e163]:
+      - generic [ref=e164]: The WellFit Standard
+      - heading "Built on Quality & Trust" [level=2] [ref=e165]
+      - paragraph [ref=e166]: Three pillars that have defined our reputation for nearly four decades.
+      - generic [ref=e167]
+      - link "Read Our Blog →" [ref=e191] [cursor=pointer]:
+        - /url: blog/
+  - region "Our products" [ref=e192]:
+    - generic [ref=e194]:
+      - generic [ref=e195]: Our Collection
+      - heading "Curated for Every Drive" [level=2] [ref=e196]
+      - paragraph [ref=e197]: Swipe through our range of custom-fit solutions — each designed to protect and elevate your vehicle's interior.
+    - generic [ref=e198]:
+      - generic [ref=e199]
+      - generic [ref=e236]: Scroll
+  - region "Video gallery" [ref=e238]:
+    - generic [ref=e239]:
+      - generic [ref=e240]: Visual Journey
+      - heading "WellFit in Motion" [level=2] [ref=e241]
+      - paragraph [ref=e242]: Witness the precision, elegance, and transformative quality that define the WellFit experience.
+      - generic [ref=e243]
+  - region "Customer reviews" [ref=e262]:
+    - generic [ref=e263]:
+      - generic [ref=e264]: Social Proof
+      - heading "Trusted by Thousands" [level=2] [ref=e265]
+      - paragraph [ref=e266]: Real reviews from real customers across India and beyond.
+      - generic [ref=e267]
+      - generic [ref=e388]
+  - region "Call to action" [ref=e402]:
+    - generic [ref=e404]:
+      - generic [ref=e405]: Get Started
+      - heading "Ready to Transform Your Drive?" [level=2] [ref=e406]
+      - paragraph [ref=e407]: Get a free consultation and quote. Our team will help you find the perfect fit for your vehicle — with our signature precision and care.
+      - link "Call +91 98951 05252" [ref=e409] [cursor=pointer]:
+        - /url: tel:+919895105252
+  - contentinfo "Footer" [ref=e412]:
+    - generic [ref=e413]:
+      - generic [ref=e414]
+      - generic [ref=e449]
+  - link "Chat on WhatsApp" [ref=e471] [cursor=pointer]:
+    - /url: https://wa.me/919895105252?text=Hello%20WellFit!%20I'd%20like%20a%20quote.
+    - img [ref=e472]
