@@ -1,7 +1,7 @@
-# robots.txt — WellFit Seat Covers
+﻿# robots.txt â€” WellFit Seat Covers
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://thiblol.github.io/wellfit-site/sitemap.xml
+Sitemap: https://thibfit.duckdns.org/sitemap.xml
 
