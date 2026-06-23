@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WellFit &mdash; Luxury Custom Car Seat Covers | India Since 1987</title>
+<title>WellFit Custom Car Seat Covers | Premium Auto Upholstery India Since 1987</title>
 <meta name="description" content="Since 1987, WellFit has been India's premier name in custom-fit luxury car seat covers. Precision craftsmanship. Uncompromising quality. Get a free quote today.">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="euFGCQ5b76WBftCk2jFluxzUGZoCAph3VJdL-Qe4Wpo">
@@ -14,7 +14,7 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="WellFit &mdash; Luxury Custom Car Seat Covers | India Since 1987">
+<meta property="og:title" content="WellFit | Luxury Custom Car Seat Covers | India Since 1987">
 <meta property="og:description" content="Since 1987, WellFit has been India's premier name in custom-fit luxury car seat covers. Precision craftsmanship. Uncompromising quality. Get a free quote today.">
 <meta property="og:url" content="https://thibfit.duckdns.org/">
 <meta property="og:image" content="https://wellfitworld.com/wp-content/uploads/2023/12/wellfit-logo-white.png">
@@ -25,7 +25,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WellFit &mdash; Luxury Custom Car Seat Covers | India Since 1987">
+<meta name="twitter:title" content="WellFit | Luxury Custom Car Seat Covers | India Since 1987">
 <meta name="twitter:description" content="Since 1987, WellFit has been India's premier name in custom-fit luxury car seat covers. Precision craftsmanship. Uncompromising quality.">
 <meta name="twitter:image" content="https://wellfitworld.com/wp-content/uploads/2023/12/wellfit-logo-white.png">
 <meta name="twitter:site" content="@WellFitIndia">
@@ -92,7 +92,7 @@
       "@type": "WebSite",
       "@id": "https://thibfit.duckdns.org/#website",
       "url": "https://thibfit.duckdns.org/",
-      "name": "WellFit &mdash; Luxury Custom Car Seat Covers",
+      "name": "WellFit | Luxury Custom Car Seat Covers",
       "publisher": { "@id": "https://thibfit.duckdns.org/#organization" }
     },
     {
@@ -141,7 +141,7 @@
           "name": "What materials are available?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We offer a wide range including supple Nappa leather, breathable performance fabrics, and premium synthetic options &mdash; all curated for durability and comfort."
+            "text": "We offer a wide range including supple Nappa leather, breathable performance fabrics, and premium synthetic options — all curated for durability and comfort."
           }
         },
         {
@@ -149,7 +149,7 @@
           "name": "Do you offer a satisfaction guarantee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. WellFit offers a 100% satisfaction guarantee &mdash; if you're not delighted with your custom seat covers, we'll make it right. No questions asked."
+            "text": "Yes. WellFit offers a 100% satisfaction guarantee — if you're not delighted with your custom seat covers, we'll make it right. No questions asked."
           }
         }
       ]
@@ -165,9 +165,12 @@
   --gold: #fdb400;
   --gold-light: #fcc32f;
   --gold-dark: #c78f00;
+  --gold-muted: #cfa530;
+  --gold-subtle-bg: rgba(253, 180, 0, 0.04);
   --gold-rgb: 253, 180, 0;
   --bg-dark: #110d04;
   --bg-darker: #0a0802;
+  --bg-warm: #161005;
   --bg-card: #1a1508;
   --bg-surface: #1f1a0c;
   --text-light: #f5f0e8;
@@ -193,6 +196,8 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
 }
+/* Subtle grain texture overlay */
+body::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 99998; opacity: 0.015; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-repeat: repeat; background-size: 256px 256px; }
 @media (hover: hover) and (pointer: fine) {
   body { cursor: none; }
   a, button, input, textarea, select, [tabindex]:not([tabindex="-1"]) { cursor: none; }
@@ -237,10 +242,12 @@ ul { list-style: none; }
 /* =============================================
    Z-INDEX SCALE
    =============================================
-   1000 &mdash; Navigation
-   999  &mdash; Mobile bottom bar
-   998  &mdash; WhatsApp floating button
-   99999 &mdash; Custom cursor (highest)
+   10000 —Skip link (focus only)
+   99999 —Custom cursor (highest)
+   99998 —Grain texture overlay
+   1000  —Navigation
+   999   —Mobile bottom bar
+   998   —WhatsApp floating button
    ============================================= */
 
 /* =============================================
@@ -299,9 +306,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text-light); fon
   letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold);
   margin-bottom: 1.2rem;
 }
-.section-label::before { content: ''; width: 28px; height: 1px; background: var(--gold); opacity: 0.35; }
+.section-label::before { content: ''; width: 28px; height: 1px; background: var(--gold-muted); opacity: 0.35; }
 .section-title {
-  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
   font-weight: 900;
   letter-spacing: -0.025em;
   margin-bottom: 1.2rem;
@@ -316,13 +323,45 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text-light); fon
 .text-center { text-align: center; }
 .mx-auto { margin-left: auto; margin-right: auto; }
 .centered-label { display: flex; align-items: center; justify-content: center; gap: 10px; }
-.centered-label::before, .centered-label::after { content: ''; width: 28px; height: 1px; background: var(--gold); opacity: 0.35; }
+.centered-label::before, .centered-label::after { content: ''; width: 28px; height: 1px; background: var(--gold-muted); opacity: 0.35; }
 
-.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-section { position: relative; padding: 140px 0; }
+.container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 32px; }
+/* Subtle diagonal pattern overlay for textures */
+.bg-texture { position: relative; }
+.bg-texture::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(253,180,0,0.015) 40px, rgba(253,180,0,0.015) 41px); pointer-events: none; z-index: 0; }
+.bg-texture > * { position: relative; z-index: 1; }
+/* Diagonal accent stripes for visual interest */
+.diagonal-accent { position: absolute; pointer-events: none; z-index: 0; }
+.diagonal-accent--1 { top: -15%; right: -10%; width: 40%; height: 140%; background: linear-gradient(135deg, transparent 47%, rgba(253,180,0,0.03) 47%, rgba(253,180,0,0.03) 53%, transparent 53%); }
+.diagonal-accent--2 { bottom: -20%; left: -8%; width: 50%; height: 120%; background: linear-gradient(225deg, transparent 47%, rgba(253,180,0,0.02) 47%, rgba(253,180,0,0.02) 53%, transparent 53%); }
+/* Gold corner accent */
+.corner-accent { position: absolute; width: 60px; height: 60px; border-color: var(--gold-muted); opacity: 0.15; pointer-events: none; z-index: 0; }
+.corner-accent--tl { top: 20px; left: 20px; border-top: 1px solid; border-left: 1px solid; }
+.corner-accent--br { bottom: 20px; right: 20px; border-bottom: 1px solid; border-left: 1px solid; }
+.corner-accent--tr { top: 20px; right: 20px; border-top: 1px solid; border-right: 1px solid; }
+.corner-accent--bl { bottom: 20px; left: 20px; border-bottom: 1px solid; border-right: 1px solid; }
+/* Full-width background band */
+.band { position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(253,180,0,0.08), transparent); pointer-events: none; z-index: 0; }
+/* Signature stitched line — evokes automotive upholstery */
+.stitch-line { position: absolute; pointer-events: none; z-index: 0; height: 2px; background: repeating-linear-gradient(90deg, var(--gold-muted), var(--gold-muted) 6px, transparent 6px, transparent 14px); opacity: 0.06; }
+.stitch-line--top { top: 0; left: 0; right: 0; }
+.stitch-line--bottom { bottom: 0; left: 0; right: 0; }
+.stitch-line--left { top: 0; bottom: 0; left: 0; width: 2px; height: auto; background: repeating-linear-gradient(180deg, var(--gold-muted), var(--gold-muted) 6px, transparent 6px, transparent 14px); }
+.stitch-line--right { top: 0; bottom: 0; right: 0; width: 2px; height: auto; background: repeating-linear-gradient(180deg, var(--gold-muted), var(--gold-muted) 6px, transparent 6px, transparent 14px); }
+/* Asymmetric grid variant — 60/40 split for visual tension */
+.grid-asymmetric { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start; }
+@media (max-width: 768px) { .grid-asymmetric { grid-template-columns: 1fr; } }
+/* Side-by-side for geo-box + FAQ */
+.about__side-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; margin: 2.5rem 0; }
+@media (max-width: 1024px) { .about__side-cols { grid-template-columns: 1fr; gap: 24px; } }
+.about__side-cols .geo-box, .about__side-cols .geo-faq { margin: 0; }
+section { position: relative; padding: 100px 0; }
 .section--dark { background: var(--bg-dark); }
 .section--darker { background: var(--bg-darker); }
+.section--warm { background: var(--bg-warm); }
 .section--card { background: var(--bg-card); }
+.section--glow::before { content: ''; position: absolute; top: -30%; right: -20%; width: 60%; height: 80%; background: radial-gradient(ellipse at center, rgba(253,180,0,0.04) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+.section--glow > * { position: relative; z-index: 1; }
 
 /* Gold divider */
 .gold-divider {
@@ -346,7 +385,7 @@ section { position: relative; padding: 140px 0; }
 }
 
 /* =============================================
-   SCROLL REVEAL &mdash; CLIP PATH
+   SCROLL REVEAL —CLIP PATH
    ============================================= */
 .reveal {
   opacity: 0;
@@ -417,11 +456,12 @@ section { position: relative; padding: 140px 0; }
 .nav__toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* =============================================
-   HERO &mdash; CINEMATIC 3D
+   HERO —CINEMATIC 3D
    ============================================= */
 .hero {
   position: relative;
-  height: 100vh; min-height: 700px; max-height: 1100px;
+  min-height: 100vh;
+  min-height: 100dvh; min-height: 600px; max-height: 1000px;
   overflow: hidden; display: flex; align-items: center; justify-content: center;
   padding: var(--nav-height) 0 0;
   box-sizing: border-box;
@@ -456,7 +496,7 @@ section { position: relative; padding: 140px 0; }
 
 .hero__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(17,13,4,0.85) 0%, rgba(17,13,4,0.50) 40%, rgba(253,180,0,0.08) 60%, rgba(17,13,4,0.75) 100%);
+  background: linear-gradient(105deg, rgba(17,13,4,0.92) 0%, rgba(17,13,4,0.60) 30%, rgba(253,180,0,0.12) 45%, rgba(253,180,0,0.05) 50%, rgba(17,13,4,0.30) 60%, rgba(17,13,4,0.80) 100%);
   z-index: 1;
   background-size: 200% 200%;
   animation: goldSweep 14s ease-in-out infinite alternate;
@@ -473,13 +513,6 @@ section { position: relative; padding: 140px 0; }
   100% { background-position: 0% 50%; }
 }
 
-/* Canvas particles layer */
-#particleCanvas {
-  position: absolute; inset: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
 .hero__bar {
   position: absolute; bottom: 0; left: 0; right: 0;
   height: 3px; z-index: 4;
@@ -494,8 +527,16 @@ section { position: relative; padding: 140px 0; }
 
 .hero__content {
   position: relative; z-index: 3;
-  text-align: center; max-width: 900px; padding: 0 24px;
+  text-align: center; max-width: 1100px; padding: 0 24px;
+  margin-left: 0;
   transform-style: preserve-3d;
+}
+@media (min-width: 1025px) {
+  .hero__content { text-align: left; margin-left: calc((100vw - 1400px) / 2 + 32px); }
+  .hero__headline { max-width: 780px; }
+  .hero__sub { margin-left: 0; }
+  .hero__actions { justify-content: flex-start; }
+  .hero__badge { margin-left: 0; }
 }
 
 .hero__logo {
@@ -521,7 +562,7 @@ section { position: relative; padding: 140px 0; }
 
 .hero__headline {
   font-family: var(--font-display); font-weight: 900;
-  font-size: clamp(1.9rem, 5.5vw, 5.5rem);
+  font-size: clamp(1.9rem, 5.5vw, 5rem);
   color: var(--text-light);
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -537,13 +578,13 @@ section { position: relative; padding: 140px 0; }
   max-width: 540px;
   margin: 1.5rem auto 2.5rem;
   opacity: 0;
-  animation: fadeUp 1s var(--ease-out-expo) 2.2s forwards;
+  animation: fadeUp 1s var(--ease-out-expo) 1.4s forwards;
 }
 
 .hero__actions {
   display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
   opacity: 0;
-  animation: fadeUp 1s var(--ease-out-expo) 2.6s forwards;
+  animation: fadeUp 1s var(--ease-out-expo) 1.8s forwards;
 }
 
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
@@ -567,29 +608,22 @@ section { position: relative; padding: 140px 0; }
 }
 .btn--outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(253,180,0,0.06); }
 
-.hero__scroll {
-  position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
-  z-index: 3;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  color: rgba(245, 240, 232, 0.2); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
-  opacity: 0; animation: fadeUp 1s var(--ease-out-expo) 3.2s forwards;
-}
-.scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollLine 2.5s ease-in-out infinite; }
-@keyframes scrollLine {
-  0%, 100% { opacity: 0.3; transform: scaleY(0.5); }
-  50% { opacity: 1; transform: scaleY(1); }
-}
 
 /* =============================================
    ABOUT
    ============================================= */
-.about { padding: 160px 0; overflow: hidden; }
-.about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about { padding: 100px 0; overflow: hidden; position: relative; }
+.about__grid { display: grid; grid-template-columns: 1fr; align-items: start; }
+.about__grid > div { max-width: 860px; margin: 0 auto; }
+.about__header { text-align: center; margin-bottom: 2.5rem; }
 .about__image-wrap { position: relative; }
-.about__image { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-card); position: relative; }
+.about__image { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-card); position: relative; margin-left: -1rem; }
+@media (min-width: 768px) { .about__image { margin-left: -2rem; } }
 .about__image img { width: 100%; height: 540px; object-fit: cover; }
 .about__image::before { content: ''; position: absolute; inset: 0; border: 1px solid rgba(253,180,0,0.12); border-radius: 12px; z-index: 1; pointer-events: none; }
-.about__image::after { content: ''; position: absolute; bottom: -14px; right: -14px; width: 130px; height: 130px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); opacity: 0.25; z-index: 2; }
+.about__image::after { content: ''; position: absolute; bottom: -18px; right: -18px; width: 160px; height: 160px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); opacity: 0.35; z-index: 2; }
+.about__image-wrap::after { content: ''; position: absolute; top: -12px; left: calc(-2rem - 12px); width: 80px; height: 80px; border-top: 2px solid var(--gold-muted); border-left: 2px solid var(--gold-muted); opacity: 0.25; z-index: 2; pointer-events: none; }
+@media (max-width: 767px) { .about__image { margin-left: 0; } .about__image-wrap::after { left: 0; } }
 .about__badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(253,180,0,0.08); color: var(--gold); padding: 6px 20px; border-radius: 100px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.2rem; border: 1px solid rgba(253,180,0,0.12); }
 .about__text { font-size: 1.02rem; line-height: 1.9; color: var(--text-muted); margin-bottom: 1.2rem; }
 .about__sig { font-family: var(--font-display); font-style: italic; font-size: 1.5rem; color: var(--gold); margin-top: 2rem; }
@@ -597,13 +631,14 @@ section { position: relative; padding: 140px 0; }
 /* =============================================
    STATS
    ============================================= */
-.stats { padding: 140px 0; position: relative; overflow: hidden; }
+.stats { padding: 100px 0; position: relative; overflow: hidden; }
 .stats__bg { position: absolute; inset: 0; background-image: url('https://site.wellfitworld.com/wp-content/uploads/2024/01/FIRST-PAGE-01-scaled.jpg'); background-size: cover; background-position: center; will-change: transform; z-index: 0; }
-.stats__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(17,13,4,0.95), rgba(17,13,4,0.85)); z-index: 1; }
+.stats__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(17,13,4,0.96) 0%, rgba(17,13,4,0.88) 40%, rgba(22,16,5,0.92) 100%); z-index: 1; }
+.stats__overlay::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 60px, rgba(253,180,0,0.025) 60px, rgba(253,180,0,0.025) 61px); }
 .stats .container { position: relative; z-index: 2; }
-.stats__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; text-align: center; margin-top: 48px; }
+.stats__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; margin-top: 36px; }
 .stat__item {
-  padding: 48px 20px;
+  padding: 36px 20px;
   border: 1px solid rgba(253, 180, 0, 0.06);
   border-radius: 16px;
   background: rgba(253, 180, 0, 0.02);
@@ -619,7 +654,7 @@ section { position: relative; padding: 140px 0; }
   transform: translateX(-100%);
   transition: transform 0.8s var(--ease-out-expo);
 }
-.stat__item:hover { border-color: rgba(253, 180, 0, 0.2); transform: translateY(-4px); }
+.stat__item:hover { border-color: var(--gold-muted); transform: translateY(-4px); }
 .stat__item:hover::before { transform: translateX(100%); }
 .stat__number { font-family: var(--font-display); font-weight: 900; font-size: clamp(3.5rem, 6vw, 5rem); color: var(--gold); line-height: 1; margin-bottom: 0.3rem; }
 .stat__suffix { font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700; color: rgba(253, 180, 0, 0.5); }
@@ -628,27 +663,29 @@ section { position: relative; padding: 140px 0; }
 /* =============================================
    PROCESS
    ============================================= */
-.process { padding: 160px 0; }
-.process__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 60px; }
+.process { padding: 100px 0; }
+.process__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
 .process__step {
-  text-align: center; padding: 52px 28px;
+  text-align: center; padding: 40px 24px;
   background: var(--bg-card); border-radius: 16px;
   border: 1px solid rgba(253, 180, 0, 0.05);
   transition: transform 0.5s var(--ease-out-expo), border-color 0.4s ease;
   position: relative;
 }
-.process__step:hover { transform: translateY(-8px); border-color: rgba(253, 180, 0, 0.18); }
-.process__step:not(:last-child)::after { content: ''; position: absolute; top: 50%; right: -13px; width: 2px; height: 40%; background: linear-gradient(to bottom, var(--gold), transparent); opacity: 0.12; transform: translateY(-50%); }
-.process__icon { width: 60px; height: 60px; border-radius: 50%; border: 2px solid rgba(253,180,0,0.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--gold); background: rgba(253,180,0,0.03); transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; }
-.process__step:hover .process__icon { background: rgba(253,180,0,0.1); border-color: rgba(253,180,0,0.35); box-shadow: 0 0 24px rgba(253,180,0,0.08); }
+.process__step:hover { transform: translateY(-4px); border-color: var(--gold-muted); }
+.process__step:not(:last-child)::after { content: ''; position: absolute; top: 50%; right: -13px; width: 2px; height: 40%; background: linear-gradient(to bottom, var(--gold-muted), transparent); opacity: 0.12; transform: translateY(-50%); }
+.process__icon { width: 60px; height: 60px; border-radius: 50%; border: 2px solid rgba(207,165,48,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--gold); background: rgba(207,165,48,0.06); transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; }
+.process__step:hover .process__icon { background: rgba(207,165,48,0.15); border-color: var(--gold-muted); box-shadow: 0 0 28px rgba(207,165,48,0.1); }
 .process__step-title { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--text-light); margin-bottom: 10px; }
 .process__step-desc { font-size: 0.88rem; line-height: 1.7; color: var(--text-dim); }
 
 /* =============================================
    CHAIRMAN
    ============================================= */
-.chairman { padding: 160px 0; }
+.chairman { padding: 100px 0; overflow: hidden; position: relative; }
 .chairman__grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
+.chairman__portrait { margin-left: -2rem; }
+@media (max-width: 767px) { .chairman__portrait { margin-left: 0; } }
 .chairman__portrait { position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-card); }
 .chairman__portrait img { width: 100%; height: 580px; object-fit: cover; }
 .chairman__portrait::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(to top, var(--bg-darker), transparent); }
@@ -662,22 +699,22 @@ section { position: relative; padding: 140px 0; }
 /* =============================================
    QUALITY
    ============================================= */
-.quality { padding: 160px 0; }
-.quality__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 60px; }
+.quality { padding: 100px 0; }
+.quality__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
 .quality__card {
   background: var(--bg-card); border-radius: 20px;
-  padding: 52px 36px;
+  padding: 40px 28px;
   border: 1px solid rgba(253, 180, 0, 0.05);
   transition: transform 0.5s var(--ease-out-expo), border-color 0.4s ease, box-shadow 0.5s var(--ease-out-expo);
 }
-.quality__card:hover { transform: translateY(-6px); border-color: rgba(253,180,0,0.18); box-shadow: 0 24px 64px rgba(0,0,0,0.4); }
-.quality__icon { width: 60px; height: 60px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background: rgba(253,180,0,0.07); color: var(--gold); border: 1px solid rgba(253,180,0,0.1); transition: background 0.4s ease; }
-.quality__card:hover .quality__icon { background: rgba(253,180,0,0.12); }
+.quality__card:hover { transform: translateY(-4px); border-color: var(--gold-muted); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+.quality__icon { width: 60px; height: 60px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background: rgba(253,180,0,0.08); color: var(--gold); border: 1px solid rgba(207,165,48,0.15); transition: background 0.4s ease; }
+.quality__card:hover .quality__icon { background: rgba(207,165,48,0.15); }
 .quality__card-title { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--text-light); margin-bottom: 12px; }
 .quality__card-text { font-size: 0.92rem; line-height: 1.8; color: var(--text-dim); }
 
 /* =============================================
-   PRODUCTS &mdash; HORIZONTAL SCROLL
+   PRODUCTS —HORIZONTAL SCROLL
    ============================================= */
 .products-section {
   padding: 0;
@@ -685,9 +722,10 @@ section { position: relative; padding: 140px 0; }
   position: relative;
 }
 .products-intro {
-  padding: 140px 0 80px;
+  padding: 100px 0 60px;
   text-align: center;
   background: var(--bg-darker);
+  position: relative;
 }
 
 .products-sticky {
@@ -709,7 +747,7 @@ section { position: relative; padding: 140px 0; }
 }
 
 .product-card {
-  flex: 0 0 420px;
+  flex: 0 0 460px;
   height: 520px;
   border-radius: 16px;
   overflow: hidden;
@@ -788,15 +826,15 @@ section { position: relative; padding: 140px 0; }
 /* =============================================
    VIDEOS
    ============================================= */
-.videos { padding: 160px 0; }
-.videos__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px; }
+.videos { padding: 100px 0; }
+.videos__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
 .video__card {
   position: relative; border-radius: 16px; overflow: hidden;
   cursor: none; aspect-ratio: 16 / 10;
   border: 1px solid rgba(253, 180, 0, 0.06);
   transition: transform 0.5s var(--ease-out-expo), border-color 0.4s ease;
 }
-.video__card:hover { transform: translateY(-6px); border-color: rgba(253, 180, 0, 0.25); }
+.video__card:hover { transform: translateY(-4px); border-color: var(--gold-muted); }
 .video__card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
 .video__card:hover img { transform: scale(1.06); }
 .video__play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(17,13,4,0.35); transition: background 0.4s ease; }
@@ -806,15 +844,15 @@ section { position: relative; padding: 140px 0; }
 .video__play-btn svg { width: 24px; height: 24px; fill: var(--gold); margin-left: 3px; }
 
 /* =============================================
-   REVIEWS &mdash; MARQUEE
+   REVIEWS —MARQUEE
    ============================================= */
-.reviews { padding: 160px 0; overflow: hidden; }
+.reviews { padding: 100px 0; overflow: hidden; }
 
 .reviews-marquee {
   display: flex;
   gap: 24px;
-  margin-top: 60px;
-  animation: marqueeScroll 40s linear infinite;
+  margin-top: 40px;
+  animation: marqueeScroll 60s linear infinite;
   width: max-content;
   padding: 0 12px;
 }
@@ -829,7 +867,7 @@ section { position: relative; padding: 140px 0; }
   flex: 0 0 380px;
   background: var(--bg-card);
   border-radius: 20px;
-  padding: 36px;
+  padding: 28px;
   border: 1px solid rgba(253, 180, 0, 0.05);
   transition: border-color 0.4s ease;
 }
@@ -841,7 +879,7 @@ section { position: relative; padding: 140px 0; }
 .review-card__date { font-size: 0.7rem; color: var(--text-dim); }
 
 .review__aggregate {
-  text-align: center; margin-top: 48px; padding: 36px;
+  text-align: center; margin-top: 36px; padding: 36px;
   background: var(--bg-card); border-radius: 20px;
   border: 1px solid rgba(253, 180, 0, 0.06);
 }
@@ -854,7 +892,7 @@ section { position: relative; padding: 140px 0; }
    CTA
    ============================================= */
 .cta {
-  padding: 140px 0;
+  padding: 100px 0;
   position: relative; overflow: hidden;
 }
 .cta::before {
@@ -875,8 +913,8 @@ section { position: relative; padding: 140px 0; }
 /* =============================================
    FOOTER
    ============================================= */
-.footer { background: var(--bg-darker); color: var(--text-dim); padding: 80px 0 0; border-top: 1px solid rgba(253,180,0,0.04); }
-.footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; padding-bottom: 60px; border-bottom: 1px solid rgba(253,180,0,0.03); }
+.footer { background: var(--bg-darker); color: var(--text-dim); padding: 60px 0 0; border-top: 1px solid rgba(253,180,0,0.04); }
+.footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; padding-bottom: 60px; border-bottom: 1px solid rgba(253,180,0,0.03); }
 .footer__logo { height: 48px; width: auto; margin-bottom: 20px; }
 .footer__about { font-size: 0.88rem; line-height: 1.8; color: var(--text-dim); max-width: 360px; }
 .footer__title { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; color: var(--text-light); margin-bottom: 24px; }
@@ -963,13 +1001,13 @@ section { position: relative; padding: 140px 0; }
   .whatsapp-float svg { width: 22px; height: 22px; }
   body { padding-bottom: 72px; }
 
-  section { padding: 80px 0; }
-  .products-intro { padding: 80px 0 40px; }
+  section { padding: 60px 0; }
+  .products-intro { padding: 60px 0 40px; }
 }
 
 @media (max-width: 480px) {
   .process__grid { grid-template-columns: 1fr; }
-  .products-intro { padding: 60px 0 20px; }
+  .products-intro { padding: 40px 0 20px; }
   .hero__actions { flex-direction: column; align-items: center; }
   .btn { width: 100%; justify-content: center; }
   .hero__logo { height: 48px; }
@@ -993,19 +1031,18 @@ section { position: relative; padding: 140px 0; }
   .reveal-clip { clip-path: none; }
   .split-char { opacity: 1; transform: none; }
   .reviews-marquee { animation: none; }
-  #particleCanvas { display: none; }
 }
 
-  /* GEO Elements &mdash; definition blocks, takeaways, FAQ, limitations */
-  .geo-def{background:rgba(253,180,0,0.04);border-left:3px solid var(--gold);padding:20px 24px;margin:1.5rem 0 2rem;border-radius:0 12px 12px 0;font-size:1rem;line-height:1.9;color:var(--text-muted)}
+  /* GEO Elements —definition blocks, takeaways, FAQ, limitations */
+  .geo-def{background:linear-gradient(135deg,rgba(253,180,0,0.06),rgba(207,165,48,0.02));border-left:3px solid var(--gold);padding:20px 24px;margin:1.5rem 0 2rem;border-radius:0 12px 12px 0;font-size:1rem;line-height:1.9;color:var(--text-muted)}
   .geo-def strong{color:var(--gold)}
-  .geo-box{background:var(--bg-card);border:1px solid rgba(253,180,0,0.1);border-radius:16px;padding:28px 32px;margin:2.5rem 0}
+  .geo-box{background:linear-gradient(135deg,var(--bg-card),rgba(207,165,48,0.04));border:1px solid rgba(207,165,48,0.15);border-radius:16px;padding:28px 32px;margin:2.5rem 0}
   .geo-box h3{font-family:var(--font-display);font-size:1.15rem;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:8px}
   .geo-box ul{list-style:none;padding:0}
   .geo-box ul li{padding:10px 0 10px 24px;position:relative;font-size:0.92rem;line-height:1.7;color:var(--text-dim);border-bottom:1px solid rgba(253,180,0,0.04)}
   .geo-box ul li:last-child{border-bottom:none}
   .geo-box ul li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:0.8rem}
-  .geo-faq details{background:var(--bg-card);border:1px solid rgba(253,180,0,0.06);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .geo-faq details{background:var(--bg-card);border:1px solid rgba(253,180,0,0.08);border-left:3px solid var(--gold-muted);border-radius:12px;margin-bottom:12px;overflow:hidden}
   .geo-faq details summary{padding:18px 24px;font-weight:600;font-size:0.92rem;color:var(--text-light);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;transition:background 0.3s ease}
   .geo-faq details summary::-webkit-details-marker{display:none}
   .geo-faq details summary::after{content:'+';color:var(--gold);font-size:1.2rem;font-weight:700;transition:transform 0.3s ease}
@@ -1013,7 +1050,7 @@ section { position: relative; padding: 140px 0; }
   .geo-faq details summary:hover{background:rgba(253,180,0,0.03)}
   .geo-faq details[open] summary{background:rgba(253,180,0,0.04);border-bottom:1px solid rgba(253,180,0,0.06)}
   .geo-faq details .faq-answer{padding:16px 24px 20px;font-size:0.9rem;line-height:1.8;color:var(--text-dim)}
-  .geo-limitations{background:rgba(253,180,0,0.02);border:1px dashed rgba(253,180,0,0.12);border-radius:12px;padding:20px 24px;margin:1.5rem 0;font-size:0.85rem;line-height:1.7;color:var(--text-dim)}
+  .geo-limitations{background:rgba(207,165,48,0.03);border:1px dashed rgba(207,165,48,0.18);border-radius:12px;padding:20px 24px;margin:1.5rem 0;font-size:0.85rem;line-height:1.7;color:var(--text-dim)}
   .geo-limitations strong{color:var(--text-light)}
 </style>
 </head>
@@ -1040,7 +1077,7 @@ section { position: relative; padding: 140px 0; }
       <li><a href="#process" class="nav__link">Process</a></li>
       <li><a href="#products" class="nav__link">Products</a></li>
       <li><a href="#gallery" class="nav__link">Gallery</a></li>
-      <li><a href="blog/" class="nav__link">Blog</a></li>
+      <li><a href="blog/index.html" class="nav__link">Blog</a></li>
       <li><a href="#contact" class="nav__link nav__cta">Get a Quote</a></li>
     </ul>
   </div>
@@ -1055,7 +1092,12 @@ section { position: relative; padding: 140px 0; }
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="hero__overlay--depth" id="heroDepthOverlay" aria-hidden="true"></div>
 
-  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="stitch-line stitch-line--top" aria-hidden="true"></div>
+  <div class="diagonal-accent diagonal-accent--1" aria-hidden="true"></div>
+  <div class="band" style="top:20%" aria-hidden="true"></div>
+  <div class="band" style="top:60%" aria-hidden="true"></div>
+
+  <!-- Hero gold bottom bar -->
   <div class="hero__bar" aria-hidden="true"></div>
 
   <div class="hero__content" id="heroContent">
@@ -1063,7 +1105,7 @@ section { position: relative; padding: 140px 0; }
 
     <div class="hero__badge">
       <span class="dot"></span>
-      Since 1987 &mdash; India's Trusted Name
+      Since 1987 | India's Trusted Name
     </div>
 
     <h1 class="hero__headline" id="heroHeadline">
@@ -1071,48 +1113,45 @@ section { position: relative; padding: 140px 0; }
       Exceptional Craft, Reimagined Interiors.
     </h1>
 
-    <p class="hero__sub">Precision-tailored luxury seat covers that transform every drive &mdash; crafted in India for the world's most discerning vehicles.</p>
+    <p class="hero__sub">Precision-tailored luxury seat covers that transform every drive — crafted in India for the world's most discerning vehicles.</p>
 
     <div class="hero__actions">
       <a href="#products" class="btn btn--gold">Explore Collection</a>
       <a href="blog/vehicle-guides.html" class="btn btn--outline">Guide by Vehicle</a>
-      <a href="#about" class="btn btn--outline">Our Story</a>
     </div>
   </div>
 
-  <div class="hero__scroll" aria-hidden="true">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about section--dark" id="about" aria-label="About WellFit">
+<section class="about section--dark bg-texture" id="about" aria-label="About WellFit">
+  <div class="stitch-line stitch-line--top" aria-hidden="true"></div>
+  <div class="stitch-line stitch-line--bottom" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+  <div class="diagonal-accent diagonal-accent--2" aria-hidden="true"></div>
   <div class="container">
     <div class="about__grid">
-      <div class="about__image-wrap reveal">
-        <div class="about__image">
-          <img src="https://site.wellfitworld.com/wp-content/uploads/2024/01/BANNNE-R-02-scaled.jpg" alt="WellFit premium interior" width="480" height="540" loading="lazy">
-        </div>
-      </div>
       <div>
-        <span class="section-label reveal reveal-delay-1">Global Leaders &mdash; Since 1987</span>
-        <div class="gold-divider gold-divider--left reveal reveal-delay-2"></div>
-        <h2 class="section-title reveal reveal-delay-2">Where Heritage Meets Innovation</h2>
+        <div class="about__header">
+          <span class="centered-label reveal reveal-delay-1">Global Leaders | Since 1987</span>
+          <div class="gold-divider mx-auto reveal reveal-delay-2"></div>
+          <h2 class="section-title reveal reveal-delay-2">Where Heritage Meets Innovation</h2>
+        </div>
 
-        <div class="geo-def reveal reveal-delay-3"><strong>Custom car seat covers</strong> are precision-tailored upholstery covers engineered to match a vehicle's exact seat geometry &mdash; protecting original fabric, enhancing comfort, and elevating interior aesthetics. <strong>WellFit Seat Covers</strong> (founded 1987, Cochin, India) has manufactured custom-fit covers for over <strong>1,000,000 vehicles</strong> across 12 countries, earning a <strong>4.3&star; rating</strong> from 268 verified Google reviews (as of June 2026), per WellFit internal sales records and Google Business Profile data.</div>
+        <div class="geo-def reveal reveal-delay-3"><strong>Custom car seat covers</strong> are precision-tailored upholstery covers engineered to match a vehicle's exact seat geometry — protecting original fabric, enhancing comfort, and elevating interior aesthetics. <strong>WellFit Seat Covers</strong> (founded 1987, Cochin, India) has manufactured custom-fit covers for over <strong>1,000,000 vehicles</strong> across 12 countries, earning a <strong>4.3&star; rating</strong> from 268 verified Google reviews (as of June 2026), per WellFit internal sales records and Google Business Profile data.</div>
 
-        <p class="about__text reveal reveal-delay-3">From humble beginnings in Bangalore to a globally recognized brand headquartered in Cochin, WellFit has spent nearly four decades perfecting the art of custom-fit automotive luxury. Every stitch tells a story of precision &mdash; curated materials, masterful craftsmanship, and an uncompromising commitment to quality that has earned the trust of over a million drivers.</p>
-        <p class="about__text reveal reveal-delay-4">Each cover is a fusion of comfort and durability, sculpted to your vehicle's exact contours. We don't just cover seats &mdash; we redefine the interior experience.</p>
+        <p class="about__text reveal reveal-delay-3">From humble beginnings in Bangalore to a globally recognized brand headquartered in Cochin, WellFit has spent nearly four decades perfecting the art of custom-fit automotive luxury. Every stitch tells a story of precision — curated materials, masterful craftsmanship, and an uncompromising commitment to quality that has earned the trust of over a million drivers.</p>
+        <p class="about__text reveal reveal-delay-4">Each cover is a fusion of comfort and durability, sculpted to your vehicle's exact contours. We don't just cover seats — we redefine the interior experience.</p>
 
         <!-- GEO Key Takeaways (O02) -->
         <div class="geo-box reveal reveal-delay-4">
           <h3>&#10022; WellFit at a Glance</h3>
           <ul>
-            <li><strong>Founded:</strong> 1987 by Yahya Ebrahim in Cochin, Kerala &mdash; 39+ years of continuous automotive upholstery craftsmanship</li>
+            <li><strong>Founded:</strong> 1987 by Yahya Ebrahim in Cochin, Kerala —39+ years of continuous automotive upholstery craftsmanship</li>
             <li><strong>Scale:</strong> Over 1,000,000 vehicles fitted with custom-fit seat covers across India, UAE, and 10 additional countries (as of June 2026)</li>
-            <li><strong>Quality rating:</strong> 4.3&star; from 268 verified Google reviews &mdash; consistently rated for craftsmanship, fit, and installation speed</li>
-            <li><strong>Materials:</strong> Premium Nappa leather (full-grain, 12 colours), automotive-grade PU leatherette (UV-stabilised), performance fabrics (50,000+ abrasion cycles), and heavy-duty canvas &mdash; each tested for India's climate conditions</li>
+            <li><strong>Quality rating:</strong> 4.3&star; from 268 verified Google reviews — consistently rated for craftsmanship, fit, and installation speed</li>
+            <li><strong>Materials:</strong> Premium Nappa leather (full-grain, 12 colours), automotive-grade PU leatherette (UV-stabilised), performance fabrics (50,000+ abrasion cycles), and heavy-duty canvas — each tested for India's climate conditions</li>
             <li><strong>Innovation:</strong> Pioneered 1-hour professional installation for custom-fit seat covers, reducing industry-standard time from 1 day to under 60 minutes</li>
             <li><strong>Coverage:</strong> Precision-fit patterns for 1,000+ vehicle models including airbag-compatible deployment zones on every cover</li>
           </ul>
@@ -1121,32 +1160,28 @@ section { position: relative; padding: 140px 0; }
         <!-- GEO FAQ (C09 + O02) -->
         <div class="geo-faq reveal reveal-delay-5" itemscope="" itemtype="https://schema.org/FAQPage">
           <h3 style="font-family:var(--font-display);font-size:1.3rem;color:var(--text-light);margin:2rem 0 1.2rem">Frequently Asked Questions</h3>
-
           <details itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary itemprop="name">What makes custom car seat covers different from universal covers?</summary>
             <div class="faq-answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text"><strong>Custom-fit covers</strong> are precision-stitched to match your vehicle's exact seat contours using model-specific patterns &mdash; unlike universal covers that stretch over any seat and can shift, bunch, or obstruct airbag deployment zones. WellFit maintains over 1,000 vehicle-specific patterns, each accounting for bolster shape, headrest geometry, split-folding mechanisms, and side airbag clearance.</div>
+              <div itemprop="text"><strong>Custom-fit covers</strong> are precision-stitched to match your vehicle's exact seat contours using model-specific patterns — unlike universal covers that stretch over any seat and can shift, bunch, or obstruct airbag deployment zones. WellFit maintains over 1,000 vehicle-specific patterns, each accounting for bolster shape, headrest geometry, split-folding mechanisms, and side airbag clearance.</div>
             </div>
           </details>
-
           <details itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary itemprop="name">How long does WellFit seat cover installation take?</summary>
             <div class="faq-answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">WellFit's professional installation typically takes <strong>30 minutes to 1 hour</strong> &mdash; a fraction of the industry average of 4&ndash;6 hours for custom-fit covers. This rapid turnaround is made possible by WellFit's precision patterns and trained technicians who have installed thousands of sets. The process includes seat inspection, precise fitting, airbag zone verification, and a comprehensive quality check before delivery.</div>
+              <div itemprop="text">WellFit's professional installation typically takes <strong>30 minutes to 1 hour</strong> — a fraction of the industry average of 4&ndash;6 hours for custom-fit covers. This rapid turnaround is made possible by WellFit's precision patterns and trained technicians who have installed thousands of sets. The process includes seat inspection, precise fitting, airbag zone verification, and a comprehensive quality check before delivery.</div>
             </div>
           </details>
-
           <details itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary itemprop="name">Which seat cover material is best for India's climate?</summary>
             <div class="faq-answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
               <div itemprop="text">For most Indian drivers, <strong>premium PU leatherette</strong> offers the best balance of heat resistance (cabin temperatures in India can exceed 70&deg;C), UV durability, ease of cleaning, and value. WellFit's PU range is formulated with UV inhibitors and a heat-reflective top coat. For maximum luxury, Nappa leather with UV-stabilisation treatment is available. For families or frequent travellers, breathable performance fabrics resist odour and are machine-washable.</div>
             </div>
           </details>
-
           <details itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary itemprop="name">Does WellFit offer a warranty or satisfaction guarantee?</summary>
             <div class="faq-answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">Yes. WellFit offers a <strong>100% satisfaction guarantee</strong> on all custom seat covers. If you're not delighted with the fit, material, or installation, WellFit will make it right &mdash; no questions asked. This policy is backed by a 4.3&star; average rating from 268 verified Google reviews and 38+ years of continuous operation since 1987.</div>
+              <div itemprop="text">Yes. WellFit offers a <strong>100% satisfaction guarantee</strong> on all custom seat covers. If you're not delighted with the fit, material, or installation, WellFit will make it right — no questions asked. This policy is backed by a 4.3&star; average rating from 268 verified Google reviews and 38+ years of continuous operation since 1987.</div>
             </div>
           </details>
         </div>
@@ -1156,7 +1191,7 @@ section { position: relative; padding: 140px 0; }
           <strong>Fitment Note:</strong> While WellFit's pattern library covers the vast majority of vehicles sold in India (1,000+ models), some limited-edition variants, grey-import vehicles, or heavily modified seats may require custom pattern development. Contact WellFit's Cochin showroom with your vehicle's exact make, model, and year to verify pattern availability before purchase. All statistics cited are as of June 2026 and sourced from WellFit internal records unless otherwise attributed.
         </div>
 
-        <div class="about__sig reveal reveal-delay-5">&mdash; You Will Love It.</div>
+        <div class="about__sig reveal reveal-delay-5">— You Will Love It.</div>
       </div>
     </div>
   </div>
@@ -1167,7 +1202,6 @@ section { position: relative; padding: 140px 0; }
   <div class="stats__bg" id="statsBg" aria-hidden="true"></div>
   <div class="stats__overlay" aria-hidden="true"></div>
   <div class="container text-center">
-    <span class="centered-label reveal" style="margin-bottom:0.6rem;">Our Legacy</span>
     <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:0.4rem;">Building Trust Since 1987</h2>
     <p class="section-subtitle mx-auto reveal reveal-delay-2" style="margin-bottom:2rem;">Numbers that speak to nearly four decades of uncompromising quality.</p>
     <div class="stats__grid">
@@ -1188,11 +1222,13 @@ section { position: relative; padding: 140px 0; }
 </section>
 
 <!-- PROCESS -->
-<section class="process section--darker" id="process" aria-label="How it works">
+<section class="process section--darker bg-texture" id="process" aria-label="How it works">
+  <div class="band" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
   <div class="container text-center">
-    <span class="centered-label reveal">Our Process</span>
     <h2 class="section-title reveal reveal-delay-1">The Art of Craftsmanship</h2>
-    <p class="section-subtitle mx-auto reveal reveal-delay-2">Four generations of precision &mdash; from initial design to final installation, each step is an art form perfected over 38 years.</p>
+    <p class="section-subtitle mx-auto reveal reveal-delay-2">Four generations of precision — from initial design to final installation, each step is an art form perfected over 38 years.</p>
     <div class="process__grid">
       <div class="process__step reveal reveal-delay-1">
         <div class="process__icon">01</div>
@@ -1202,7 +1238,7 @@ section { position: relative; padding: 140px 0; }
       <div class="process__step reveal reveal-delay-2">
         <div class="process__icon">02</div>
         <h3 class="process__step-title">Material Curation</h3>
-        <p class="process__step-desc">From supple Nappa leathers to breathable performance fabrics &mdash; chosen for your lifestyle.</p>
+        <p class="process__step-desc">From supple Nappa leathers to breathable performance fabrics — chosen for your lifestyle.</p>
       </div>
       <div class="process__step reveal reveal-delay-3">
         <div class="process__icon">03</div>
@@ -1219,19 +1255,22 @@ section { position: relative; padding: 140px 0; }
 </section>
 
 <!-- CHAIRMAN -->
-<section class="chairman section--dark" id="chairman" aria-label="Chairman's story">
+<section class="chairman section--warm bg-texture" id="chairman" aria-label="Chairman's story">
+  <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+  <div class="diagonal-accent diagonal-accent--1" style="opacity:0.3" aria-hidden="true"></div>
   <div class="container">
     <div class="chairman__grid">
       <div class="chairman__portrait reveal">
-        <img src="https://wellfitworld.com/wp-content/uploads/2023/12/Yahya-Ibrahim-Musliyar-Thalangara.jpg" alt="Yahya Ebrahim &mdash; Chairman, WellFit" width="380" height="580" loading="lazy">
+        <img src="https://wellfitworld.com/wp-content/uploads/2023/12/Yahya-Ibrahim-Musliyar-Thalangara.jpg" alt="Yahya Ebrahim — Chairman, WellFit" width="380" height="580" loading="lazy">
       </div>
       <div>
         <span class="section-label reveal reveal-delay-1">From Vision to Legacy</span>
         <h2 class="chairman__name reveal reveal-delay-2">Yahya Ebrahim</h2>
         <div class="chairman__title reveal reveal-delay-3">Founder &amp; Chairman</div>
         <div class="chairman__story">
-          <p class="reveal reveal-delay-4">In the 1980s, a young Yahya Ebrahim recognized a gap in the market &mdash; car owners deserved seat covers tailored precisely to their vehicles, not one-size-fits-all compromises. His vision was simple yet revolutionary: custom-fit perfection delivered with unprecedented speed and care.</p>
-          <p class="reveal reveal-delay-5">Establishing WellFit in India, he transformed the industry &mdash; condensing installation from days to a single hour while elevating craftsmanship. Today, the brand spans continents, yet the founding passion endures: to incorporate the latest innovations without compromising the artistry that built the name.</p>
+          <p class="reveal reveal-delay-4">In the 1980s, a young Yahya Ebrahim recognized a gap in the market — car owners deserved seat covers tailored precisely to their vehicles, not one-size-fits-all compromises. His vision was simple yet revolutionary: custom-fit perfection delivered with unprecedented speed and care.</p>
+          <p class="reveal reveal-delay-5">Establishing WellFit in India, he transformed the industry — condensing installation from days to a single hour while elevating craftsmanship. Today, the brand spans continents, yet the founding passion endures: to incorporate the latest innovations without compromising the artistry that built the name.</p>
           <div class="chairman__quote reveal reveal-delay-6">"Every car tells a story. Our seat covers should make it worth telling."</div>
         </div>
       </div>
@@ -1240,9 +1279,12 @@ section { position: relative; padding: 140px 0; }
 </section>
 
 <!-- QUALITY -->
-<section class="quality section--darker" id="quality" aria-label="Quality pillars">
+<section class="quality section--darker bg-texture" id="quality" aria-label="Quality pillars">
+  <div class="stitch-line stitch-line--top" aria-hidden="true"></div>
+  <div class="stitch-line stitch-line--bottom" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--tr" style="top:40px;right:40px" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--bl" style="bottom:40px;left:40px" aria-hidden="true"></div>
   <div class="container text-center">
-    <span class="centered-label reveal">The WellFit Standard</span>
     <h2 class="section-title reveal reveal-delay-1">Built on Quality &amp; Trust</h2>
     <p class="section-subtitle mx-auto reveal reveal-delay-2">Three pillars that have defined our reputation for nearly four decades.</p>
     <div class="quality__grid">
@@ -1258,7 +1300,7 @@ section { position: relative; padding: 140px 0; }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3 class="quality__card-title">Unwavering Trust</h3>
-        <p class="quality__card-text">100% satisfaction guarantee &mdash; if you're not delighted, we'll make it right. No questions asked. That's the WellFit promise.</p>
+        <p class="quality__card-text">100% satisfaction guarantee — if you're not delighted, we'll make it right. No questions asked. That's the WellFit promise.</p>
       </div>
       <div class="quality__card reveal reveal-delay-3">
         <div class="quality__icon">
@@ -1269,18 +1311,23 @@ section { position: relative; padding: 140px 0; }
       </div>
     </div>
     <div class="text-center reveal reveal-delay-3" style="margin-top:48px">
-      <a href="blog/" class="btn btn--outline" style="font-size:0.82rem">Read Our Blog &rarr;</a>
+      <a href="blog/index.html" class="btn btn--outline" style="font-size:0.82rem">Read Our Blog &rarr;</a>
     </div>
   </div>
 </section>
 
 <!-- PRODUCTS (Horizontal Scroll) -->
 <section class="products-section" id="products" aria-label="Our products">
+  <div class="stitch-line stitch-line--top" aria-hidden="true"></div>
+  <div class="stitch-line stitch-line--left" aria-hidden="true"></div>
+  <div class="stitch-line stitch-line--right" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
   <div class="products-intro">
     <div class="container text-center">
       <span class="centered-label reveal">Our Collection</span>
       <h2 class="section-title reveal reveal-delay-1">Curated for Every Drive</h2>
-      <p class="section-subtitle mx-auto reveal reveal-delay-2">Swipe through our range of custom-fit solutions &mdash; each designed to protect and elevate your vehicle's interior.</p>
+      <p class="section-subtitle mx-auto reveal reveal-delay-2">Swipe through our range of custom-fit solutions — each designed to protect and elevate your vehicle's interior.</p>
     </div>
   </div>
 
@@ -1296,7 +1343,7 @@ section { position: relative; padding: 140px 0; }
       <div class="product-card" data-tilt>
         <img class="product-card__img" src="https://wellfitworld.com/wp-content/uploads/2024/01/Artboard-1-1.jpg" alt="Skoda custom covers" width="400" height="300" loading="lazy">
         <div class="product-card__overlay">
-          <span class="product-card__label">Custom Fit &mdash; Skoda</span>
+          <span class="product-card__label">Custom Fit — Skoda</span>
           <span class="product-card__sub">Precision tailored</span>
         </div>
       </div>
@@ -1337,7 +1384,6 @@ section { position: relative; padding: 140px 0; }
       </div>
     </div>
     <div class="products-scrollbar" aria-hidden="true">
-      <span style="font-size:0.6rem;letter-spacing:0.1em;color:var(--text-dim);">Scroll</span>
       <div class="products-scrollbar__track">
         <div class="products-scrollbar__fill" id="scrollbarFill"></div>
       </div>
@@ -1346,9 +1392,9 @@ section { position: relative; padding: 140px 0; }
 </section>
 
 <!-- VIDEOS -->
-<section class="videos section--dark" id="gallery" aria-label="Video gallery">
+<section class="videos section--warm bg-texture" id="gallery" aria-label="Video gallery">
+  <div class="band" aria-hidden="true"></div>
   <div class="container text-center">
-    <span class="centered-label reveal">Visual Journey</span>
     <h2 class="section-title reveal reveal-delay-1">WellFit in Motion</h2>
     <p class="section-subtitle mx-auto reveal reveal-delay-2">Witness the precision, elegance, and transformative quality that define the WellFit experience.</p>
     <div class="videos__grid">
@@ -1375,9 +1421,12 @@ section { position: relative; padding: 140px 0; }
 </section>
 
 <!-- REVIEWS MARQUEE -->
-<section class="reviews section--darker" id="reviews" aria-label="Customer reviews">
+<section class="reviews section--darker section--glow bg-texture" id="reviews" aria-label="Customer reviews">
+  <div class="stitch-line stitch-line--top" aria-hidden="true"></div>
+  <div class="stitch-line stitch-line--bottom" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--tr" style="top:40px;right:40px" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--bl" style="bottom:40px;left:40px" aria-hidden="true"></div>
   <div class="container text-center">
-    <span class="centered-label reveal">Social Proof</span>
     <h2 class="section-title reveal reveal-delay-1">Trusted by Thousands</h2>
     <p class="section-subtitle mx-auto reveal reveal-delay-2">Real reviews from real customers across India and beyond.</p>
 
@@ -1427,7 +1476,7 @@ section { position: relative; padding: 140px 0; }
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <p class="review-card__text">"Excellent service and quality. WellFit delivered exactly what they promised &mdash; beautiful custom seat covers that fit perfectly."</p>
+        <p class="review-card__text">"Excellent service and quality. WellFit delivered exactly what they promised — beautiful custom seat covers that fit perfectly."</p>
         <div class="review-card__author">Mohammed Al Zarooni</div>
         <div class="review-card__date">March 2023</div>
       </div>
@@ -1476,7 +1525,7 @@ section { position: relative; padding: 140px 0; }
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <p class="review-card__text">"Excellent service and quality. WellFit delivered exactly what they promised &mdash; beautiful custom seat covers that fit perfectly."</p>
+        <p class="review-card__text">"Excellent service and quality. WellFit delivered exactly what they promised — beautiful custom seat covers that fit perfectly."</p>
         <div class="review-card__author">Mohammed Al Zarooni</div>
         <div class="review-card__date">March 2023</div>
       </div>
@@ -1497,12 +1546,15 @@ section { position: relative; padding: 140px 0; }
 </section>
 
 <!-- CTA -->
-<section class="cta section--dark" id="contact-cta" aria-label="Call to action">
+<section class="cta section--dark bg-texture" id="contact-cta" aria-label="Call to action">
+  <div class="stitch-line stitch-line--top" aria-hidden="true"></div>
+  <div class="stitch-line stitch-line--bottom" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+  <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
   <div class="container">
     <div class="cta__content">
-      <span class="centered-label reveal">Get Started</span>
       <h2 class="section-title reveal reveal-delay-1">Ready to Transform Your Drive?</h2>
-      <p class="reveal reveal-delay-2">Get a free consultation and quote. Our team will help you find the perfect fit for your vehicle &mdash; with our signature precision and care.</p>
+      <p class="reveal reveal-delay-2">Get a free consultation and quote. Our team will help you find the perfect fit for your vehicle — with our signature precision and care.</p>
       <div class="reveal reveal-delay-3">
         <a href="tel:+919895105252" class="btn btn--gold" style="font-size:1rem;padding:18px 48px;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -1519,7 +1571,7 @@ section { position: relative; padding: 140px 0; }
     <div class="footer__grid">
       <div>
         <img class="footer__logo" src="https://wellfitworld.com/wp-content/uploads/2023/12/wellfit-logo-white.png" alt="WellFit" width="140" height="48" loading="lazy">
-        <p class="footer__about">Since 1987, WellFit has been India's premier name in custom-fit luxury car seat covers. Precision, quality, and artistry &mdash; delivered to your doorstep.</p>
+        <p class="footer__about">Since 1987, WellFit has been India's premier name in custom-fit luxury car seat covers. Precision, quality, and artistry — delivered to your doorstep.</p>
       </div>
       <div>
         <h4 class="footer__title">Quick Links</h4>
@@ -1528,7 +1580,7 @@ section { position: relative; padding: 140px 0; }
           <li><a href="#products" class="footer__link">Products</a></li>
           <li><a href="#gallery" class="footer__link">Gallery</a></li>
           <li><a href="#process" class="footer__link">Process</a></li>
-          <li><a href="blog/" class="footer__link">Blog</a></li>
+          <li><a href="blog/index.html" class="footer__link">Blog</a></li>
           <li><a href="#contact" class="footer__link">Contact</a></li>
         </ul>
       </div>
@@ -1647,7 +1699,7 @@ section { position: relative; padding: 140px 0; }
     });
 
     function cursorSmooth() {
-      ringX += (mouseX - ringX) * 0.2;
+      ringX += (mouseX - ringX) * 0.12;
       ringY += (mouseY - ringY) * 0.2;
       ring.style.left = ringX + 'px';
       ring.style.top = ringY + 'px';
@@ -1726,7 +1778,7 @@ section { position: relative; padding: 140px 0; }
     var headline = document.getElementById('heroHeadline');
     if (headline) {
       var charIdx = 0;
-      var baseDelay = 2.4;
+      var baseDelay = 0.6;
       function wrapChars(node) {
         if (node.nodeType === 3) {
           var text = node.textContent;
@@ -1744,7 +1796,7 @@ section { position: relative; padding: 140px 0; }
               for (var i = 0; i < word.length; i++) {
                 var s = document.createElement('span');
                 s.className = 'split-char';
-                s.style.animationDelay = (baseDelay + charIdx * 0.035) + 's';
+                s.style.animationDelay = (baseDelay + charIdx * 0.025) + 's';
                 s.textContent = word[i];
                 wordSpan.appendChild(s);
                 charIdx++;
@@ -1761,158 +1813,6 @@ section { position: relative; padding: 140px 0; }
       var kids = Array.from(headline.childNodes);
       kids.forEach(function(k) { wrapChars(k); });
     }
-  }
-
-  /* ========== CANVAS PARTICLES ========== */
-  var canvas = document.getElementById('particleCanvas');
-  if (canvas && shouldAnimate && !isTouchDevice) {
-    var ctx = canvas.getContext('2d');
-    var particles = [];
-    var mouseParticle = { x: 0, y: 0, active: false };
-    var PARTICLE_COUNT = 30;
-    var particleAnimId = null;
-    var particleRunning = false;
-
-    function resizeCanvas() {
-      canvas.width = canvas.parentElement.offsetWidth;
-      canvas.height = canvas.parentElement.offsetHeight;
-    }
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    function Particle() {
-      this.reset();
-    }
-    Particle.prototype.reset = function() {
-      this.x = Math.random() * canvas.width;
-      this.y = canvas.height + 20;
-      this.size = 1.5 + Math.random() * 2.5;
-      this.speed = 0.2 + Math.random() * 0.6;
-      this.drift = (Math.random() - 0.5) * 0.3;
-      this.opacity = 0;
-      this.life = 0;
-      this.maxLife = 400 + Math.random() * 600;
-      this.fadeIn = 60 + Math.random() * 80;
-      this.fadeOut = 60;
-    };
-    Particle.prototype.update = function() {
-      this.y -= this.speed;
-      this.x += this.drift + Math.sin(this.life * 0.005) * 0.1;
-      this.life++;
-
-      if (this.life < this.fadeIn) this.opacity = this.life / this.fadeIn * 0.5;
-      else if (this.life > this.maxLife - this.fadeOut) this.opacity = Math.max(0, (this.maxLife - this.life) / this.fadeOut * 0.5);
-      else this.opacity = 0.5;
-
-      if (this.life > this.maxLife || this.y < -20) this.reset();
-    };
-    Particle.prototype.draw = function() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(253, 180, 0, ' + this.opacity + ')';
-      ctx.fill();
-    };
-
-    for (var i = 0; i < PARTICLE_COUNT; i++) {
-      var p = new Particle();
-      p.y = Math.random() * canvas.height;
-      p.life = Math.random() * p.maxLife;
-      particles.push(p);
-    }
-
-    canvas.addEventListener('mousemove', function(e) {
-      var rect = canvas.getBoundingClientRect();
-      mouseParticle.x = e.clientX - rect.left;
-      mouseParticle.y = e.clientY - rect.top;
-      mouseParticle.active = true;
-    });
-    canvas.addEventListener('mouseleave', function() { mouseParticle.active = false; });
-
-    var heroSection = document.querySelector('.hero');
-
-    function drawParticles() {
-      if (!heroSection || tabHidden) { particleRunning = false; return; }
-      var heroRect = heroSection.getBoundingClientRect();
-      if (!(heroRect.bottom > 0 && heroRect.top < window.innerHeight)) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particleRunning = false;
-        return;
-      }
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Emit from cursor
-      if (mouseParticle.active) {
-        for (var b = 0; b < 1; b++) {
-          if (particles.length < PARTICLE_COUNT + 10) break;
-          var idx = Math.floor(Math.random() * particles.length);
-          var p = particles[idx];
-          if (p.life > p.maxLife * 0.5) {
-            p.x = mouseParticle.x + (Math.random() - 0.5) * 30;
-            p.y = mouseParticle.y + (Math.random() - 0.5) * 30;
-            p.life = 0;
-            p.opacity = 0.3;
-          }
-        }
-      }
-
-      for (var c = 0; c < particles.length; c++) {
-        particles[c].update();
-        particles[c].draw();
-      }
-      particleRunning = true;
-      requestAnimationFrame(drawParticles);
-    }
-
-    function startParticles() {
-      if (particleRunning || !canvas || tabHidden) return;
-      particleRunning = true;
-      drawParticles();
-    }
-
-    function stopParticles() {
-      particleRunning = false;
-      if (particleAnimId) { cancelAnimationFrame(particleAnimId); particleAnimId = null; }
-      if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }
-
-    startParticles();
-
-    // Scroll-based: start/stop based on hero visibility
-    var scrollThrottle;
-    window.addEventListener('scroll', function() {
-      if (scrollThrottle) return;
-      scrollThrottle = setTimeout(function() {
-        scrollThrottle = null;
-        if (tabHidden) return;
-        var heroRect = heroSection.getBoundingClientRect();
-        if (heroRect.bottom > 0 && heroRect.top < window.innerHeight) startParticles();
-        else stopParticles();
-      }, 200);
-    }, { passive: true });
-
-    // Tab visibility: fully stop when hidden, resume when visible
-    document.addEventListener('visibilitychange', function() {
-      if (document.hidden) stopParticles();
-      else startParticles();
-    });
-  }
-
-  /* ========== 3D TILT CARDS ========== */
-  if (!isTouchDevice && shouldAnimate) {
-    document.querySelectorAll('[data-tilt]').forEach(function(card) {
-      card.addEventListener('mousemove', function(e) {
-        var rect = this.getBoundingClientRect();
-        var x = (e.clientX - rect.left) / rect.width;
-        var y = (e.clientY - rect.top) / rect.height;
-        var tiltX = (y - 0.5) * -10;
-        var tiltY = (x - 0.5) * 10;
-        this.style.transform = 'perspective(1000px) rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg) scale3d(1.02,1.02,1.02)';
-      });
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = '';
-      });
-    });
   }
 
   /* ========== HORIZONTAL SCROLL ========== */
