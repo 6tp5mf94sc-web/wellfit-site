@@ -1,6 +1,4 @@
-# robots.txt — WellFit Seat Covers
 User-agent: *
-Allow: /
-
-# Sitemaps
+Disallow: 
+Disallow: /cgi-bin/
 Sitemap: https://thibfit.duckdns.org/sitemap.xml
